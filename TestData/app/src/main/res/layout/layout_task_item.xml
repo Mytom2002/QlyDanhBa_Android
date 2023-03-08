@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:id="@+id/layout_item"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.2"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@drawable/baseline_person_24"
+        android:id="@+id/icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleTask"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/icon"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="title"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <View
+        android:id="@+id/grayLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:background="#8E8D8D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/icon"
+        app:layout_constraintTop_toBottomOf="@id/titleTask" />
+
+    <TextView
+        android:id="@+id/contentTask"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:background="#D6D0D0"
+        android:maxLines="5"
+        android:text="title"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:padding="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/icon"
+        app:layout_constraintTop_toBottomOf="@id/grayLine" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

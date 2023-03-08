@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        >
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="MY CONTACT"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="NAME"
+            app:layout_constraintTop_toBottomOf="@id/titleText"
+            android:id="@+id/textname"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="SDT"
+            app:layout_constraintTop_toBottomOf="@id/textname"
+            android:id="@+id/textsdt"
+            app:layout_constraintStart_toStartOf="parent"
+
+            />
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/searchView"
+            app:layout_constraintTop_toBottomOf="@id/textsdt"
+            android:queryHint="Search Here"
+            android:iconifiedByDefault="false"
+
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listTaskRecylerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minHeight="400dp"
+            android:maxHeight="400dp"
+            android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+        <Button
+            android:id="@+id/buttonAddTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:text="Add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listTaskRecylerView" />
+        <Button
+            android:id="@+id/buttonRemoveTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:text="Remove"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listTaskRecylerView" />
+<!--        <Button-->
+<!--            android:id="@+id/update"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:layout_marginStart="150dp"-->
+<!--            android:text="update"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/listTaskRecylerView" />-->
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
